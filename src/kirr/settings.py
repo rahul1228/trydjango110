@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 
+# Refers to the Base directory of this project(aka the src folder where the manage.py file is located)
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -49,6 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# For url mapping
 ROOT_URLCONF = 'kirr.urls'
 
 TEMPLATES = [
@@ -67,6 +70,8 @@ TEMPLATES = [
     },
 ]
 
+
+# WSGI SERVER INITIALIZATION
 WSGI_APPLICATION = 'kirr.wsgi.application'
 
 
@@ -81,7 +86,7 @@ DATABASES = {
 }
 
 
-# Password validation
+# BUILT-IN AUTH Password validation **Super cool look up later**
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
